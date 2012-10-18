@@ -64,5 +64,4 @@ $smarty->debugging = $app_config['smarty_debugging'];
 $smarty->cache_lifetime = $app_config['smarty_cache_lifetime'];
 $smarty->caching = $app_config['smarty_caching'];
 $smarty->caching_type = $app_config['smarty_caching_type'];
-// $smarty->testInstall();
 ?>
