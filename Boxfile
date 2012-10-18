@@ -7,10 +7,11 @@ web1:
     - zip
   shared_writable_dirs:
     - smarty/templates_c/
+    - smarty/cache/
   after_build:
     - "php pagoda/smarty-install.php"
-    - "mkdir ./libs; mv pagoda/Smarty-3.1.12/libs/* ./libs/"
-    - "mkdir ./smarty; mv pagoda/loader.php smarty/loader.php"
+    - "mkdir ./smarty/configs; mkdir ./libs; mv pagoda/Smarty-3.1.12/libs/* ./libs/"
+    - "mv pagoda/loader.php smarty/loader.php"
     - "rm -R pagoda"
 db1:
   name: smarty3-db
