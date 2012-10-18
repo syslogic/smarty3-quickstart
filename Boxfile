@@ -2,7 +2,6 @@ web1:
   name: smarty3-web
   php_extensions:
     - mysqli
-    - memcache
     - curl
     - zip
   shared_writable_dirs:
@@ -10,11 +9,8 @@ web1:
   after_build:
     - "php pagoda/smarty-install.php"
     - "mkdir ./libs; mv pagoda/Smarty-3.1.12/libs/* ./libs/"
-    - "mv pagoda/loader.php smarty/loader.php"
+    - "mkdir ./smarty; mv pagoda/loader.php smarty/loader.php"
     - "rm -R pagoda"
 db1:
   name: smarty3-db
   type: mysql
-cache1:
-  name: smarty3-cache
-  type: memcached

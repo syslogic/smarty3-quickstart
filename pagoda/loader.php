@@ -1,6 +1,6 @@
 <?php
 /*
-	Smarty PHP Bootstrap v3.49 for PagodaBox
+	SmartyPHP Bootstrap v3.49 for PagodaBox
 	Copyright 2012 by Martin Zeitler
 	http://www.codefx.biz
 */
