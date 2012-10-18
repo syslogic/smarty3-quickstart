@@ -8,7 +8,7 @@ web1:
     - smarty/templates_c/
   after_build:
     - "php pagoda/smarty-install.php"
-    - "mv pagoda/Smarty-3.1.12/libs/* ./libs/"
+    - "mkdir ./libs; mv pagoda/Smarty-3.1.12/libs/* ./libs/"
     - "mv pagoda/loader.php smarty/loader.php"
 db1:
   name: smarty3-db
