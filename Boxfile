@@ -1,0 +1,14 @@
+web1:
+  name: smarty3-web
+  php_extensions:
+    - mysqli
+    - curl
+    - zip
+  shared_writable_dirs:
+    - smarty/templates_c/
+  after_build:
+    - "php pagoda/smarty-install.php"
+    - "mv pagoda/Smarty-3.1.12/libs/* ./libs/"
+    - "mv pagoda/loader.php smarty/loader.php"
+db1:
+  name: smarty3-db
